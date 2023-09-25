@@ -15,7 +15,6 @@ class RolesProvider with ChangeNotifier {
   }
 
   List<Roles> getRolesSuggestion(String query) {
-    if (rolesList == null) return [];
     List<Roles> suggestions = rolesList.where((searchResult) {
       final result = searchResult.englishName!.toLowerCase();
       final input = query.toLowerCase();
@@ -51,7 +50,7 @@ class RolesProvider with ChangeNotifier {
   }
 
   removeRoless(Roles item) {
-    var res = service.removeRoles(item.id.toString());
+    service.removeRoles(item.id.toString());
     notifyListeners();
   }
 }

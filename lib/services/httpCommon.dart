@@ -22,7 +22,7 @@ Future<dynamic> deleteLinkHttp(String url, String id) {
     final int statusCode = response.statusCode;
 
     if (statusCode < 200 || statusCode > 400) {
-      final ex = Exception("Error while fetching data");
+      Exception("Error while fetching data");
     }
     return _decoder.convert(res);
   }).catchError((ex) {
@@ -46,7 +46,7 @@ Future<dynamic> getLinkHttp(String url, String id) {
     final int statusCode = response.statusCode;
 
     if (statusCode < 200 || statusCode > 400) {
-      final ex = Exception("Error while fetching data");
+      Exception("Error while fetching data");
     }
     return _decoder.convert(res);
   }).catchError((ex) {
@@ -68,7 +68,7 @@ Future<dynamic> postHttp(String url, {body, bool addHeaders = true}) {
     final int statusCode = response.statusCode;
     print(res);
     if (statusCode < 200 || statusCode > 400) {
-      final ex = Exception("Error while fetching data");
+      Exception("Error while fetching data");
     }
     return _decoder.convert(res);
   }).catchError((ex) {
@@ -130,7 +130,7 @@ Future<dynamic> getHttp(String url, {body, bool addHeaders = true}) {
     final String res = response.body;
     final int statusCode = response.statusCode;
     if (statusCode < 200 || statusCode > 400) {
-      final ex = Exception("Error while fetching data");
+      Exception("Error while fetching data");
     }
     return _decoder.convert(res);
   }).catchError((ex) {

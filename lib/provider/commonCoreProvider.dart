@@ -43,11 +43,7 @@ class CommonCoreProvider with ChangeNotifier {
       );
       if (response.statusCode == 200) {
         Map data = jsonDecode(response.body);
-        if (data != null) {
-          _userMapper(data);
-        } else {
-          return null;
-        }
+        _userMapper(data);
       } else {
         return null;
       }

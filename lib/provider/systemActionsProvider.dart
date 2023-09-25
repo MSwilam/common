@@ -15,7 +15,6 @@ class SystemActionsProvider with ChangeNotifier {
   }
 
   List<SystemActions> getSystemActionsSuggestion(String query) {
-    if (systemActionsList == null) return [];
     List<SystemActions> suggestions = systemActionsList.where((searchResult) {
       final result = searchResult.englishName!.toLowerCase();
       final input = query.toLowerCase();
@@ -50,7 +49,7 @@ class SystemActionsProvider with ChangeNotifier {
   }
 
   removeSystemActionss(SystemActions item) {
-    var res = service.removeSystemActions(item.id.toString());
+    service.removeSystemActions(item.id.toString());
     notifyListeners();
   }
 }

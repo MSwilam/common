@@ -15,8 +15,8 @@ var detailTextT = const TextStyle(color: Colors.black, fontSize: 18);
 var errorTextStyle = const TextStyle(color: Colors.red, fontSize: 20);
 
 class DetailsContainer extends StatelessWidget {
-  DetailsContainer({super.key, required this.body});
-  Widget body;
+  const DetailsContainer({super.key, required this.body});
+  final Widget body;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -29,8 +29,8 @@ class DetailsContainer extends StatelessWidget {
 }
 
 class DetailsColumn extends StatelessWidget {
-  DetailsColumn({super.key, required this.children});
-  List<Widget> children;
+  const DetailsColumn({super.key, required this.children});
+  final List<Widget> children;
   @override
   Widget build(BuildContext context) {
     return DetailsContainer(
@@ -40,8 +40,8 @@ class DetailsColumn extends StatelessWidget {
 }
 
 class DetailsRow extends StatelessWidget {
-  DetailsRow({super.key, required this.children});
-  List<Widget> children;
+  const DetailsRow({super.key, required this.children});
+  final List<Widget> children;
   @override
   Widget build(BuildContext context) {
     return Column(

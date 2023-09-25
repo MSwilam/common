@@ -20,7 +20,7 @@ class DropdownButtonWidgetFuture extends StatelessWidget {
             style: errorTextStyle,
           );
         } else {
-          List<Object> data = snapshot.data as List<Object>;
+          snapshot.data as List<Object>;
           return Container(
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
               decoration: BoxDecoration(
